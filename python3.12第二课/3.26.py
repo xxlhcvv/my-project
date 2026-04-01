@@ -1,7 +1,6 @@
-#1.if判断基本格式
-#用户从控制台输入成绩，如果满分，输出“你真棒！”，如果60分，输出“你还要继续努力呦！”
-score=int(input('起输入你的成绩：'))
-if score==100:
-    print("你真棒！")
-else :  #else后面不需要添加任何条件
-    print("你太笨了")
+import numpy as np
+import pandas as pd
+df=pd.read_csv(r'D:\AI\第3章\data\data\used_cars.csv',sep=',',header=0)
+columns=['brand','bodyType','fuelType','gearbox','power','kilometer','notRepairedDamage','days','v_0','v_1','price']
+df=df[columns][:]
+df=(df-df.min())/(df.max()-df.min())
