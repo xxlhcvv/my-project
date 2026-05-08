@@ -183,7 +183,7 @@ def on_click(x, y):
     history.append((grid_x, grid_y, current_player))
     draw_piece(grid_x, grid_y, current_player)
 
-    # 检查胜负
+    #检查胜负
     if check_win(grid_x, grid_y, current_player):
         game_over = True
         update_info()
